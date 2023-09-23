@@ -1,0 +1,104 @@
+<section class="contact">
+    <div class="container">
+        <div class="text-center pt-5 text-dark ">
+            <h2 class=" ">CONTACT ME</h2>
+        <div class="d-flex  justify-content-center">
+            <div class="left-line"></div>
+            <div class='star-icon '>
+                <i class="fa-solid fa-star fa-2x"></i>
+            </div>
+            <div class="right-line"></div>
+        </div>
+        </div>
+
+       <form [formGroup]="registerForm" class="vstack gap-2" (ngSubmit)="registrition(registerForm)">
+        <div class="row w-50 m-auto pt-5  shadow-lg rounded p-3">
+
+            <div class="col-md-12 mb-3 form-floating">
+                <input   class="form-control"   type="text" placeholder="first Name" formControlName="first_name"
+                [ngClass]="{
+                            'is-vaild':!firstName?.errors
+                            &&firstName?.touched ,
+
+                           'is-invalid':firstName?.errors
+                           &&firstName?.touched
+                          }" >
+                <label>first Name</label>
+                <ul class="list-unstyled alert alert-danger small p-1 invalid-feedback">
+                    <li *ngIf="firstName?.getError('required')">required</li>
+                    <li *ngIf="firstName?.getError('minlength')">min length 3</li>
+                    <li *ngIf="firstName?.getError('maxlength')" >max Length 5</li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 mb-3 form-floating">
+                <input   class="form-control"   type="text" placeholder="last Name" formControlName="last_name" 
+                [ngClass]="{
+                    'is-vaild':!LastName?.errors
+                    &&LastName?.touched ,
+
+                   'is-invalid':LastName?.errors
+                   &&LastName?.touched
+                  }" >
+                <label>last Name</label>
+                <ul class="alert alert-danger list-unstyled invalid-feedback">
+                    <li *ngIf="LastName?.getError('required')">required</li>
+                    <li *ngIf="LastName?.getError('maxlength')">max Length 5</li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 mb-3 form-floating">
+                <input   class="form-control" type="email" placeholder="email" formControlName="email" 
+                [ngClass]="{
+                    'is-vaild':!email?.errors
+                    &&email?.touched ,
+
+                   'is-invalid':email?.errors
+                   &&email?.touched
+                  }" >
+                <label>email</label>
+                <ul class="alert alert-danger list-unstyled invalid-feedback">
+                    <li *ngIf="email?.getError('required')">required</li>
+                    <li *ngIf="email?.getError('email')"> in vaild Email</li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 mb-3 form-floating">
+                <input class="form-control" type="password" placeholder="password" formControlName="password" 
+                [ngClass]="{
+                    'is-valid':password?.errors
+                    &&password?.touched,
+
+                    'is-invalid':password?.errors
+                    &&password?.touched
+                }">
+                <label>password</label>
+                <ul class="alert alert-danger list-unstyled invalid-feedback">
+                    <li *ngIf="password?.getError('required')">required</li>
+                    <li *ngIf="password?.getError('maxlength')"> max Length 6</li>
+                </ul>
+            </div>
+
+            <div class="col-md-12 mb-3 form-floating">
+                <input    class="form-control" type="number" placeholder="age" formControlName="age" 
+                [ngClass]="{
+                    'is-valid':age?.errors
+                    &&age?.touched,
+
+                    'is-invalid':age?.errors
+                    &&age?.touched
+                }">
+                <label>age</label>
+                <ul class="alert alert-danger list-unstyled invalid-feedback">
+                    <li *ngIf="password?.getError('required')">required</li>
+                </ul>
+
+            </div>
+
+            
+
+          <button  class=" col-2 btn btn-info">register</button>            
+        </div>
+       </form>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+.portfolio{
+    height: 100vh;
+}
+.left-line{
+    height: 7px;
+    background: rgb(48, 48, 48);
+    width: 150px;
+    margin-top: 10px;
+}
+.right-line{
+    height: 7px;
+    background: rgb(48, 48, 48);
+    width: 150px;
+    margin-top: 10px;
+} 
+
+.leyer{
+    display: none;
+    background-color: rgba(26, 188, 156,0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  
+}
+
+.card:hover .leyer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ff{
+    background-color:#1abc9c ;
+    padding-inline: 50px;
+}

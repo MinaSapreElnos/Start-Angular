@@ -1,0 +1,15 @@
+.contact{
+    height: 100vh;
+}
+.left-line{
+    height: 7px;
+    background: rgb(48, 48, 48);
+    width: 150px;
+    margin-top: 10px;
+}
+.right-line{
+    height: 7px;
+    background: rgb(48, 48, 48);
+    width: 150px;
+    margin-top: 10px;
+} 

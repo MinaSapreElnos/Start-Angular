@@ -1,0 +1,21 @@
+.about{
+    height: 100vh;
+    background-color: #1abc9c;
+}
+
+h2{
+    font-size: 50px;
+}
+
+.left-line{
+    height: 7px;
+    background: white;
+    width: 150px;
+    margin-top: 10px;
+}
+.right-line{
+    height: 7px;
+    background: white;
+    width: 150px;
+    margin-top: 10px;
+} 
